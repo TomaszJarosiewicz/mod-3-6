@@ -1,0 +1,290 @@
+/*
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@import 'variables', 'mixin';
+
+@media (min-width: 1025px) {
+
+    a {
+        color: $color-global;
+    }
+
+    .btn {
+        margin: 0;
+    }
+
+    .menu {
+
+        .hamburger {
+            display: $display;
+        }
+
+        .nav-link {
+            @include flex(flex, space-between, center, row);
+        }
+    }
+
+    .splash {
+        line-height: $line-height + .4;
+
+        .title-page {
+            font-size: $size-global + 16;
+        }
+
+        .subtitle {
+            font-size: $size-global + 38;
+        }
+    }
+
+    .footer {
+        padding-top: 36px;
+        padding-bottom: 36px;
+
+        .footer-author {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: left;
+        }
+
+        .footer-social {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/*
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .btn {
+        margin-top: 25px;
+    }
+
+    .splash {
+        line-height: $line-height + .4;
+
+        .title-page {
+            font-size: $size-global + 12;
+        }
+
+        .subtitle {
+            font-size: $size-global + 28;
+        }
+    }
+
+    .footer {
+        padding-top: 28px;
+        padding-bottom: 28px;
+
+        .footer-author {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: left;
+        }
+
+        .footer-social {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/*
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .btn {
+        margin-top: 25px;
+    }
+
+    .splash {
+        line-height: $line-height + .3;
+
+        .title-page {
+            font-size: $size-global + 12;
+        }
+
+        .subtitle {
+            font-size: $size-global + 28;
+        }
+    }
+
+    .footer {
+        padding-top: 28px;
+        padding-bottom: 28px;
+
+        .footer-author {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: left;
+        }
+
+        .footer-social {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    a {
+        color: $color-section;
+    }
+
+    .btn {
+        margin-top: 25px;
+    }
+
+    #navigation {
+        position: relative;
+
+        .menu {
+            @include flex(flex, flex-end, center, column);
+
+                .hamburger {
+                    display: block;
+                }
+
+                .nav-link {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include flex(flex, center, center, column);
+                    width: $width;
+                    min-height: 100vh;
+                    background: $bg-global;
+                    z-index: 1;
+                    display: $display;
+
+                    li {
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
+
+    .splash {
+        line-height: $line-height + .1;
+
+        .title-page {
+            font-size: $size-global + 8;
+        }
+
+        .subtitle {
+            font-size: $size-global + 22;
+        }
+    }
+
+    .footer {
+        padding-top: 28px;
+        padding-bottom: 28px;
+
+        .footer-author {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: left;
+        }
+
+        .footer-social {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    a {
+        color: $color-section;
+    }
+
+    .btn {
+        margin-top: 25px;
+    }
+
+    #navigation {
+        position: relative;
+
+        .menu {
+            @include flex(flex, flex-end, center, column);
+
+                .hamburger {
+                    display: block;
+                }
+
+                .nav-link {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include flex(flex, center, center, column);
+                    width: $width;
+                    min-height: 100vh;
+                    background: $bg-global;
+                    z-index: 1;
+
+                    li {
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
+
+    .splash {
+        line-height: $line-height + .1;
+
+        .title-page {
+            font-size: $size-global + 8;
+        }
+
+        .subtitle {
+            font-size: $size-global + 22;
+        }
+    }
+
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .footer-author {
+            margin-bottom: 12px;
+        }
+    }
+}

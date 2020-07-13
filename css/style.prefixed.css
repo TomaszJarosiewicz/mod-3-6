@@ -11,7 +11,282 @@
   outline: none;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2a2929;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
+  text-transform: uppercase;
+}
+
+header {
+  position: relative;
+}
+
+.btn {
+  width: 168px;
+  padding: 16px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.section-header {
+  font-size: 42px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.section-subheader {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #a19e9e;
+}
+
+/* Navigation */
+.nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  z-index: 2;
+}
+
+.nav .img-brand {
+  max-width: 100%;
+  width: 10%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.nav .menu .hamburger {
+  position: relative;
+  width: 60px;
+  height: 16px;
+}
+
+.nav .menu .hamburger span {
+  width: 70%;
+  height: 2px;
+  background: #fff;
+}
+
+.nav .menu .hamburger span:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav .menu .hamburger span:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav .menu li {
+  margin-left: 20px;
+}
+
+/* Splash */
+.splash {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/gadgets-336635_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  color: #fff;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+.splash::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: .5;
+  z-index: -1;
+}
+
+.splash .title-page {
+  font-family: 'Playfair Display', serif;
+  text-transform: capitalize;
+}
+
+.splash .subtitle {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.splash .btn.btn-yellow {
+  background: #e2cd0f;
+  color: #fff;
+}
+
+/* Services */
+.services {
+  padding: 100px 0;
+}
+
+.services .services-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-top: 50px;
+}
+
+.services .services-box .circle {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #e2cd0f;
+}
+
+.services .services-box .circle .fas {
+  color: #e2cd0f;
+  font-size: 30px;
+}
+
+.services .services-box .description-box {
+  width: 100%;
+}
+
+.services .services-box .description-box .box-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.services .services-box .description-box .box-subtitle {
+  font-weight: 300;
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 100px 0;
+  background: #e6e4e4;
+}
+
+.portfolio .portfolio-card {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.portfolio .portfolio-card .img-card {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 320px;
+}
+
+.portfolio .portfolio-card .card-description {
+  width: 100%;
+  margin-top: -5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+  background: #fff;
+  text-transform: capitalize;
+}
+
+.portfolio .portfolio-card .card-description .card-header {
+  font-size: 18px;
+}
+
+.portfolio .portfolio-card .card-description .card-subheader {
+  font-family: 'Playfair Display', serif;
+  color: #a19e9e;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+}
+
+.footer .footer-author {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.footer .footer-social ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.footer .footer-social ul .circle {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: #1d1c1c;
+}
+
+.footer .footer-social ul .circle .fab {
+  color: #fff;
 }
 /*# sourceMappingURL=style.prefixed.css.map */

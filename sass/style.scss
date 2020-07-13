@@ -15,6 +15,250 @@
     outline: none;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $size-global;
+    line-height: $line-height;
+    color: $color-section;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: $display;
+    cursor: pointer;
+}
+
 ul {
     list-style-type: none;
+    text-transform: $uppercase;
+}
+
+header {
+    position: relative;
+}
+
+.btn {
+    width: 168px;
+    padding: 16px;
+    border: 0;
+    text-transform: $uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.section-header {
+    font-size: $size-global + 28;
+    font-weight: 500;
+    text-transform: $uppercase;
+}
+
+.section-subheader {
+    font-family: 'Playfair Display', serif;
+    font-size: $size-global;
+    font-weight: 300;
+    color: $color-light;
+}
+
+/* Navigation */
+
+.nav {
+    @include flex(flex, space-between, center, row);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 2;
+
+    .img-brand {
+        max-width: $width;
+        width: $width - 90;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .menu {
+
+        .hamburger {
+            position: relative;
+            width: 60px;
+            height: 16px;
+
+            span {
+                width: $width - 30;
+                height: 2px;
+                background: $bg-global;
+
+                &:first-child {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                &:last-child {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        li {
+            margin-left: 20px;
+        }
+    }
+}
+
+/* Splash */
+
+.splash {
+    position: relative;
+    width: $width;
+    height: 100vh;
+    background-image: url("/images/gadgets-336635_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    @include flex(flex, center, center, column);
+    color: $color-global;
+    letter-spacing: 2px;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $width;
+        height: 100vh;
+        background: #000;
+        opacity: .5;
+        z-index: -1;
+    }
+
+    .title-page {
+        font-family: 'Playfair Display', serif;
+        text-transform: capitalize;
+    }
+
+    .subtitle {
+        text-transform: $uppercase;
+        font-weight: 900;
+    }
+
+    .btn {
+
+        &.btn-yellow {
+            background: $btn-color;
+            color: $color-global;
+        }
+    }
+}
+
+/* Services */
+
+.services {
+    padding: $padding-global;
+
+    .services-box {
+        @include flex(flex, center, center, column);
+        margin-top: 50px;
+
+        .circle {
+            @include flex(flex, center, center, row);
+            @include radius(65px, 65px, 50%);
+            margin-bottom: 20px;
+            border: 3px solid $btn-color;
+
+            .fas {
+                color: $btn-color;
+                font-size: $size-global + 16;
+            }
+        }
+
+        .description-box {
+            width: $width;
+
+            .box-title {
+                margin-bottom: 10px;
+                font-size: $size-global + 6;
+                text-transform: capitalize;
+                font-weight: 500;
+            }
+
+            .box-subtitle {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: $padding-global;
+    background: $bg-section;
+
+    .portfolio-card {
+        margin-top: 50px;
+        width: 100%;
+
+        .img-card {
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 320px;
+        }
+
+        .card-description {
+            width: 100%;
+            margin-top: -5px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 0;
+            background: $bg-global;
+            text-transform: capitalize;
+
+            .card-header {
+                font-size: $size-global + 4;
+            }
+
+            .card-subheader {
+                font-family: 'Playfair Display', serif;
+                color: $color-light;
+            }
+        }
+    }
+}
+
+/* Footer */
+
+.footer {
+    position: relative;
+
+    .footer-author {
+        font-size: $size-global - 2;
+        text-transform: capitalize;
+    }
+
+    .footer-social {
+
+        ul {
+            @include flex(flex, center, center, row);
+
+            .circle {
+                @include flex(flex, center, center, column);
+                @include radius(32px, 32px, 50%);
+                margin: 0 5px;
+                background: $bg-dark;
+
+                .fab {
+                    color: $bg-global;
+                }
+            }
+        }
+    }
 }

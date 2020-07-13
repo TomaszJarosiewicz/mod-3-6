@@ -1,0 +1,248 @@
+/*
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) {
+  a {
+    color: #fff;
+  }
+  .btn {
+    margin: 0;
+  }
+  .menu .hamburger {
+    display: none;
+  }
+  .menu .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .splash {
+    line-height: 2;
+  }
+  .splash .title-page {
+    font-size: 30px;
+  }
+  .splash .subtitle {
+    font-size: 52px;
+  }
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .footer .footer-author {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .footer .footer-social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn {
+    margin-top: 25px;
+  }
+  .splash {
+    line-height: 2;
+  }
+  .splash .title-page {
+    font-size: 26px;
+  }
+  .splash .subtitle {
+    font-size: 42px;
+  }
+  .footer {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .footer .footer-author {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .footer .footer-social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .btn {
+    margin-top: 25px;
+  }
+  .splash {
+    line-height: 1.9;
+  }
+  .splash .title-page {
+    font-size: 26px;
+  }
+  .splash .subtitle {
+    font-size: 42px;
+  }
+  .footer {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .footer .footer-author {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .footer .footer-social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  a {
+    color: #2a2929;
+  }
+  .btn {
+    margin-top: 25px;
+  }
+  #navigation {
+    position: relative;
+  }
+  #navigation .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+  #navigation .menu .hamburger {
+    display: block;
+  }
+  #navigation .menu .nav-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    z-index: 1;
+    display: none;
+  }
+  #navigation .menu .nav-link li {
+    padding: 15px 0;
+  }
+  .splash {
+    line-height: 1.7;
+  }
+  .splash .title-page {
+    font-size: 22px;
+  }
+  .splash .subtitle {
+    font-size: 36px;
+  }
+  .footer {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .footer .footer-author {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .footer .footer-social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  a {
+    color: #2a2929;
+  }
+  .btn {
+    margin-top: 25px;
+  }
+  #navigation {
+    position: relative;
+  }
+  #navigation .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+  #navigation .menu .hamburger {
+    display: block;
+  }
+  #navigation .menu .nav-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    z-index: 1;
+  }
+  #navigation .menu .nav-link li {
+    padding: 15px 0;
+  }
+  .splash {
+    line-height: 1.7;
+  }
+  .splash .title-page {
+    font-size: 22px;
+  }
+  .splash .subtitle {
+    font-size: 36px;
+  }
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer .footer-author {
+    margin-bottom: 12px;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
