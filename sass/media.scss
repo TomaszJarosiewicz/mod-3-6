@@ -15,6 +15,10 @@
         margin: 0;
     }
 
+    .img-brand {
+        width: $width - 85;
+    }
+
     .menu {
 
         .hamburger {
@@ -23,6 +27,10 @@
 
         .nav-link {
             @include flex(flex, space-between, center, row);
+
+            li {
+                margin-left: 20px;
+            }
         }
     }
 
@@ -66,8 +74,50 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+    a {
+        color: $color-section;
+    }
+
     .btn {
         margin-top: 25px;
+    }
+
+    #navigation {
+        position: relative;
+
+        .nav {
+            padding: 30px;
+
+            .img-brand {
+                width: $width - 82;
+            }
+
+            .menu {
+                @include flex(flex, flex-end, center, column);
+
+                .hamburger {
+                    display: block;
+                }
+
+                .nav-link {
+                    @include flex(flex, center, center, column);
+                    position: absolute;
+                    top: 0;
+                    right: -100%;
+                    transform: translateX(50%);
+                    width: $width;
+                    min-height: 100vh;
+                    background: $bg-global;
+                    z-index: 1;
+                    transition: all .5s ease-in-out;
+
+                    li {
+                        padding: 15px 0;
+                        font-size: $size-global + 4;
+                    }
+                }
+            }
+        }
     }
 
     .splash {
@@ -110,8 +160,46 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
+    a {
+        color: $color-section;
+    }
+
     .btn {
         margin-top: 25px;
+    }
+
+    #navigation {
+        position: relative;
+
+        .img-brand {
+            width: $width - 82;
+        }
+
+        .menu {
+            @include flex(flex, flex-end, center, column);
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-link {
+                @include flex(flex, center, center, column);
+                position: absolute;
+                top: 0;
+                right: -100%;
+                transform: translateX(50%);
+                width: $width;
+                min-height: 100vh;
+                background: $bg-global;
+                z-index: 1;
+                transition: all .5s ease-in-out;
+
+                li {
+                    padding: 15px 0;
+                    font-size: $size-global + 4;
+                }
+            }
+        }
     }
 
     .splash {
@@ -165,31 +253,35 @@
     #navigation {
         position: relative;
 
+        .img-brand {
+            width: $width - 82;
+        }
+
         .menu {
             @include flex(flex, flex-end, center, column);
 
-                .hamburger {
-                    display: block;
-                }
+            .hamburger {
+                display: block;
+            }
 
-                .nav-link {
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    @include flex(flex, center, center, column);
-                    width: $width;
-                    min-height: 100vh;
-                    background: $bg-global;
-                    z-index: 1;
-                    display: $display;
+            .nav-link {
+                @include flex(flex, center, center, column);
+                position: absolute;
+                top: 0;
+                right: -100%;
+                transform: translateX(100%);
+                width: $width;
+                min-height: 100vh;
+                background: $bg-global;
+                z-index: 1;
+                transition: all .5s ease-in-out;
 
-                    li {
-                        padding: 15px 0;
-                    }
+                li {
+                    padding: 15px 0;
                 }
             }
         }
+    }
 
     .splash {
         line-height: $line-height + .1;
@@ -242,30 +334,35 @@
     #navigation {
         position: relative;
 
+        .img-brand {
+            width: $width - 70;
+        }
+
         .menu {
             @include flex(flex, flex-end, center, column);
 
-                .hamburger {
-                    display: block;
-                }
+            .hamburger {
+                display: block;
+            }
 
-                .nav-link {
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    @include flex(flex, center, center, column);
-                    width: $width;
-                    min-height: 100vh;
-                    background: $bg-global;
-                    z-index: 1;
+            .nav-link {
+                @include flex(flex, center, center, column);
+                position: absolute;
+                top: 0;
+                right: -100%;
+                transform: translateX(50%);
+                width: $width;
+                min-height: 100vh;
+                background: $bg-global;
+                z-index: 1;
+                transition: all .5s ease-in-out;
 
-                    li {
-                        padding: 15px 0;
-                    }
+                li {
+                    padding: 15px 0;
                 }
             }
         }
+    }
 
     .splash {
         line-height: $line-height + .1;

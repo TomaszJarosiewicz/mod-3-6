@@ -9,6 +9,12 @@ html {
   -ms-overflow-style: scrollbar;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -17,25 +23,25 @@ html {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .container {
-    max-width: 540px;
+    max-width: 480px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 481px) and (max-width: 767px) {
   .container {
-    max-width: 720px;
+    max-width: 767px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .container {
     max-width: 960px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .container {
     max-width: 1140px;
   }
@@ -54,8 +60,6 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .no-gutters {

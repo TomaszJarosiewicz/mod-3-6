@@ -58,7 +58,11 @@ header {
 }
 
 /* Navigation */
-.nav {
+#navigation {
+  overflow: hidden;
+}
+
+#navigation .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,39 +75,76 @@ header {
   z-index: 2;
 }
 
-.nav .img-brand {
+#navigation .nav .img-brand {
   max-width: 100%;
-  width: 10%;
   background-size: cover;
   background-position: center center;
 }
 
-.nav .menu .hamburger {
+#navigation .nav .menu .hamburger {
   position: relative;
   width: 60px;
   height: 16px;
+  padding: 10px;
 }
 
-.nav .menu .hamburger span {
+#navigation .nav .menu .hamburger span {
   width: 70%;
   height: 2px;
   background: #fff;
+  transition: all .5s ease-in-out;
 }
 
-.nav .menu .hamburger span:first-child {
+#navigation .nav .menu .hamburger span:first-child {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.nav .menu .hamburger span:last-child {
+#navigation .nav .menu .hamburger span:last-child {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.nav .menu li {
-  margin-left: 20px;
+#navigation .nav .menu .hamburger.active {
+  z-index: 2;
+}
+
+#navigation .nav .menu .hamburger.active span {
+  transition: all .3s ease-in-out;
+  background: #1d1c1c;
+}
+
+#navigation .nav .menu .hamburger.active span:first-child {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(-45deg);
+}
+
+#navigation .nav .menu .hamburger.active span:last-child {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+
+#navigation .nav .menu .nav-link.active-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 100%;
+  min-height: 100vh;
+  transform: translateX(50%);
+}
+
+#navigation .nav .menu .nav-link.active-nav li {
+  padding: 15px 0;
 }
 
 /* Splash */
