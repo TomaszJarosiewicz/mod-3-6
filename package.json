@@ -23,7 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "html-validate": "^3.0.0",
     "mkdir": "0.0.2",
     "node-modules": "^1.0.1",
